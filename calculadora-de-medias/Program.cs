@@ -8,6 +8,7 @@ do
     float somaTotal = 0;
     float notaParcial = 0;
     double mediaFinal = 0;
+    string mediaWriteLine = "";
 
     Console.WriteLine("Digite a quantidade de notas a ser calculada");
     numNotas = int.Parse(Console.ReadLine());
@@ -18,10 +19,11 @@ do
         notaParcial = float.Parse(Console.ReadLine());
         somaTotal = somaTotal + notaParcial;
     }
-
+    
     mediaFinal = somaTotal/numNotas;
+    mediaWriteLine = mediaFinal.ToString("0.00");
 
-    Console.WriteLine("A média do aluno foi: "+mediaFinal);
+    Console.WriteLine("A média do aluno foi: "+mediaWriteLine);
 
     if(mediaFinal >= 6)
     {
